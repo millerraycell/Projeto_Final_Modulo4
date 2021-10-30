@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Viva Real Clone</title>
+</head>
+<body>
+    <header>
+        <div class="img-container">
+            <img src="./src/img/vivareal.png" alt="">
+        </div>
+
+        <div class="header-items">
+            <span class="header-span">COMPRAR</span>
+            <span class="header-span">ALUGAR</span>
+            <span class="header-span">IMÓVEIS NOVOS</span>
+            <span class="header-span">SELEÇÃO VIVA REAL</span>
+            <span class="header-span">COMPRAR</span>
+            <span class="header-span">DESCOBRIR</span>
+            <span class="header-span">FINANCIAMENTO</span>
+        </div>
+
+        <div class="header-login">
+            <span class="header-span">ANUNCIAR IMÓVEIS</span>
+            <span class="header-span">ENTRAR</span>
+        </div>
+    </header>
+
+    <main>
+        <aside>
+            <div class="imovel-container">
+                <div class="imovel">
+                    <span class="aside-span">LOCALIZAÇÃO DO IMÓVEL</span>
+                    
+                    <form autocomplete="off" action="/action_page.php">
+                        <div class="autocomplete" style="width:300px;">
+                          <input class="autocomplete-input" id="myInput" type="text" name="myCountry" placeholder="Country">
+                        </div>
+                      </form>
+                    
+                    <span class="aside-span">IMÓVEL COM</span>  
+                    
+                    <div class="slider">
+                        <input type="checkbox" class="slider_on-off__checkbox" id="on-off">
+                        <label for="on-off" class="slider-button"></label>
+                    </div>
+
+                </div>
+            </div>
+        </aside>
+
+        <div class="search"></div>
+    </main>
+    
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
