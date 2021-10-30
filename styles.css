@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: Open Sans,Helvetica,Sans-Serif;
+}
+
+header {
+    height: 56px;
+
+    padding-left: 16px;
+    padding-right: 16px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #1190cd;
+}
+
+header .img-container {
+    display: flex;
+
+    margin-right: 10rem;
+}
+
+header .img-container img {
+    height: 100px;
+    height: 100px;
+}
+
+header .header-items{
+    margin-right: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-items .header-span, header .header-login .header-span {
+    font-size: 15px;
+    color: white;
+}
+
+header .header-items span + span{
+    margin-left: 2rem;
+}
+
+header .header-login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .header-login span + span{
+    margin-left: 2rem;
+}
+
+main aside .imovel-container .imovel .autocomplete {
+    position: relative;
+    display: inline-block;
+}
+main aside .imovel-container .imovel .autocomplete .autocomplete-input {
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 2px grey;
+    
+    padding: 10px;
+    font-size: 14px;
+}
+
+main aside .imovel-container .imovel .autocomplete .autocomplete-items {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+    
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+}
+
+main aside .imovel-container .imovel .autocomplete .autocomplete-items div {
+    padding: 10px;
+    
+    cursor: pointer;
+
+    background-color: #fff;
+    
+    border-bottom: 1px solid #d4d4d4;
+}
+
+main aside .imovel-container .imovel .autocomplete .autocomplete-items .autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+main aside .imovel-container .imovel .autocomplete .autocomplete-items .autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+main aside .imovel-container .imovel .slider .slider_on-off__checkbox{
+    position: absolute;
+    left: -9999px;
+}
+
+main aside .imovel-container .imovel .slider .slider-button{
+    display: inline-block;
+    vertical-align: middle;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+main aside .imovel-container .imovel .slider .slider-button::before,
+main aside .imovel-container .imovel .slider .slider-button::after{
+    content: "";
+    transition: all 0.3s ease;
+}
+
+main aside .imovel-container .imovel .slider .slider-button::before{
+    display: inline-block;
+    
+    width: 2em;
+    height: 1em;
+    
+    background: #900;
+
+    border-radius: 1em;
+}
+
+main aside .imovel-container .imovel .slider .slider-button::after{
+    position: absolute;
+
+    top: 0.025em;
+    left: 0.025em;
+    width: 0.95em;
+    height: 0.95em;
+
+    background: #FFF;
+
+    border-radius: 100%;
+}
+
+main aside .imovel-container .imovel .slider .slider_on-off__checkbox:checked + .slider-button::before{
+    background: #55d069;
+}
+
+main aside .imovel-container .imovel .slider .slider_on-off__checkbox:checked + .slider-button::after{
+    left: 1.025em;
+}
