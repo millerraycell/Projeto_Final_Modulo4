@@ -57,6 +57,7 @@ export function autocomplete(inp, arr) {
             e.preventDefault()
 
             console.log("submit")
+            //api call
             if (currentFocus > -1) {
                 if (x) {
                     x[currentFocus].click();

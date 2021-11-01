@@ -13,19 +13,34 @@
             <img src="./src/img/vivareal.png" alt="">
         </div>
 
-        <div class="header-items">
-            <span class="header-span">COMPRAR</span>
-            <span class="header-span">ALUGAR</span>
-            <span class="header-span">IMÓVEIS NOVOS</span>
-            <span class="header-span">SELEÇÃO VIVA REAL</span>
-            <span class="header-span">COMPRAR</span>
-            <span class="header-span">DESCOBRIR</span>
-            <span class="header-span">FINANCIAMENTO</span>
+        <div class="header-items-container">
+            <div class="header-item">
+                <span class="header-span">COMPRAR</span>
+            </div>
+            <div class="header-item">
+                <span class="header-span">ALUGAR</span>
+            </div>
+            <div class="header-item">
+                <span class="header-span">IMÓVEIS NOVOS</span>
+            </div>
+            <div class="header-item">
+                <span class="header-span">SELEÇÃO VIVA REAL</span>
+            </div>
+            <div class="header-item">
+                <span class="header-span">DESCOBRIR</span>
+            </div>
+            <div class="header-item">
+                <span class="header-span">FINANCIAMENTO</span>
+            </div>
         </div>
 
-        <div class="header-login">
-            <span class="header-span">ANUNCIAR IMÓVEIS</span>
-            <span class="header-span">ENTRAR</span>
+        <div class="header-login-container">
+            <div class="header-item">
+                <span class="header-span">ANUNCIAR IMÓVEIS</span>
+            </div>
+            <div class="header-item">
+                <span class="header-span">ENTRAR</span>
+            </div>
         </div>
     </header>
 
@@ -33,23 +48,118 @@
         <aside>
             <div class="imovel-container">
                 <div class="imovel">
-                    <span class="aside-span">LOCALIZAÇÃO DO IMÓVEL</span>
+                    <div class="localizacao">
+                        <span class="aside-span">LOCALIZAÇÃO DO IMÓVEL</span>
+                        
+                        <form autocomplete="off" action="/action_page.php">
+                            <div class="autocomplete" style="width:300px;">
+                              <input class="autocomplete-input" id="myInput" type="text" name="myCountry" placeholder="Digite uma cidade">
+                            </div>
+                          </form>
+                    </div>
+
+                    <div class="imovel-com">
+                        <span class="aside-span">IMÓVEL COM</span> 
+
+                        <div class="slider-text">
+                            <div class="slider">
+                                <input type="checkbox" class="slider_on-off__checkbox" id="on-off">
+                                <label for="on-off" class="slider-button"></label>
+                            </div>
+                            <span>Tour Virtual ou Vídeos</span>
+                        </div>     
+                    </div>
                     
-                    <form autocomplete="off" action="/action_page.php">
-                        <div class="autocomplete" style="width:300px;">
-                          <input class="autocomplete-input" id="myInput" type="text" name="myCountry" placeholder="Country">
+                    <div class="precos">
+                        <div class="limite">
+                            <span class="aside-span">PREÇO MÍNIMO</span>
+                            <input type="number" class="money-input" />
                         </div>
-                      </form>
+
+                        <div class="limite">
+                            <span class="aside-span">PREÇO MÁXIMO</span>
+                            <input type="number" class="money-input" />
+                        </div>
+                    </div>
                     
-                    <span class="aside-span">IMÓVEL COM</span>  
+
+                    <span class="aside-span">NÚMERO DE QUARTOS</span>
+
+                    <div class="numbers">
+                        <input type="button" value="1+">
+                        <input type="button" value="2+">
+                        <input type="button" value="3+">
+                        <input type="button" value="4+">
+                        <input type="button" value="5+">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="especs-container">
+                <div class="especs">
+                    <div class="precos">
+                        <div class="limite">
+                            <span class="aside-span">ÁREA MÁXIMA</span>
+                            <input type="number" class="money-input" />
+                        </div>
+    
+                        <div class="limite">
+                            <span class="aside-span">ÁREA MÁXIMO</span>
+                            <input type="number" class="money-input" />
+                        </div>
+                    </div>
                     
-                    <div class="slider">
-                        <input type="checkbox" class="slider_on-off__checkbox" id="on-off">
-                        <label for="on-off" class="slider-button"></label>
+    
+                    <span class="aside-span">NÚMERO DE VAGAS NA GARAGEM</span>
+    
+                    <div class="numbers">
+                        <input type="button" value="1+">
+                        <input type="button" value="2+">
+                        <input type="button" value="3+">
+                        <input type="button" value="4+">
+                        <input type="button" value="5+">
+                    </div>
+    
+                    <span class="aside-span">NÚMERO DE BANHEIROS</span>
+    
+                    <div class="numbers">
+                        <input type="button" value="1+">
+                        <input type="button" value="2+">
+                        <input type="button" value="3+">
+                        <input type="button" value="4+">
+                        <input type="button" value="5+">
+                    </div>
+
+                    <span class="aside-span">LAZER E ESPORTE</span>
+
+                    <div class="entries-container">
+                        <div class="entries">
+                            <input type="checkbox" name="check" id="check-ent"><h5>Academia</h5>
+                        </div>
+                        <div class="entries">
+                            <input type="checkbox" name="check" id="check-ent"><h5>Cinema</h5>
+                        </div>
+                        <div class="entries">
+                            <input type="checkbox" name="check" id="check-ent"><h5>Espaço Gourmet</h5>
+                        </div>
+                        <div class="entries">
+                            <input type="checkbox" name="check" id="check-ent"><h5>Espaço verde / Parque</h5>
+                        </div>
+                        <div class="entries">
+                            <input type="checkbox" name="check" id="check-ent"><h5>Gramado</h5>
+                        </div>
+                        <div class="entries">
+                            <input type="checkbox" name="check" id="check-ent"><h5>Jardim</h5>
+                        </div>
+                        <div class="entries">
+                            <input type="checkbox" name="check" id="check-ent"><h5>Piscina</h5>
+                        </div>
                     </div>
 
                 </div>
             </div>
+
         </aside>
 
         <div class="search"></div>
