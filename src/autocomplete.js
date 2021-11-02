@@ -1,3 +1,5 @@
+import { listing } from "./aptListing.js";
+
 export function autocomplete(inp, arr) {
     let currentFocus;
 
@@ -27,6 +29,14 @@ export function autocomplete(inp, arr) {
 
                 b.addEventListener("click", function(e) {
                     inp.value = this.getElementsByTagName("input")[0].value;
+
+                    if(inp.value === "São Paulo"){
+                        listing('sp', 'sao-paulo')
+                    }
+
+                    if(inp.value === "Rio de Janeiro"){
+                        listing('rj', 'rio-de-janeiro')
+                    }
                     closeAllLists();
                 });
 
@@ -37,7 +47,7 @@ export function autocomplete(inp, arr) {
     });
 
     inp.addEventListener("keydown", function(e) {
-        var x = document.getElementById(this.id + "autocomplete-list");
+        let x = document.getElementById(this.id + "autocomplete-list");
   
         if (x) {
             x = x.getElementsByTagName("div");
@@ -55,11 +65,16 @@ export function autocomplete(inp, arr) {
         } 
         else if (e.keyCode == 13) {
             e.preventDefault()
-
-            console.log("submit")
-            //api call
             if (currentFocus > -1) {
                 if (x) {
+                    const inputValue = document.querySelector(".autocomplete-active").childNodes[2].value;
+                    if(inputValue === "São Paulo"){
+                        listing('sp', 'sao-paulo')
+                    }
+
+                    if(inputValue === "Rio de Janeiro"){
+                        listing('rj', 'rio-de-janeiro')
+                    }
                     x[currentFocus].click();
                 }
             }
@@ -85,15 +100,15 @@ export function autocomplete(inp, arr) {
     }
 
     function removeActive(x) {
-        for (var i = 0; i < x.length; i++) {
+        for (let i = 0; i < x.length; i++) {
             x[i].classList.remove("autocomplete-active");
         }
     }
 
     function closeAllLists(elmnt) {
-        var x = document.getElementsByClassName("autocomplete-items");
+        let x = document.getElementsByClassName("autocomplete-items");
         
-        for (var i = 0; i < x.length; i++) {
+        for (let i = 0; i < x.length; i++) {
             if (elmnt != x[i] && elmnt != inp) {
                 x[i].parentNode.removeChild(x[i]);
             }
